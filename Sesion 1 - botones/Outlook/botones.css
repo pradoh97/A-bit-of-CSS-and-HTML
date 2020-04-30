@@ -1,0 +1,25 @@
+body{
+  background-color:rgba(0, 0, 0, 0.4);
+  padding: 1em;
+}
+
+.boton{
+  display: inline-block;
+  padding: 0.8em;
+  cursor: pointer;
+}
+
+.boton.cta{
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 4px;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  color:rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.boton.cta:hover{
+  transition-duration: 0.3s;
+  transform: translate(-1px);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+}

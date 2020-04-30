@@ -1,0 +1,38 @@
+body{
+  --color-enfasis: rgb(25, 190, 100);
+  --color-enfasis-transparente: rgba(25, 190, 100,0.1);
+  --color-contraste: rgb(255, 255, 255);
+}
+
+.boton{
+  display: inline-block;
+  margin: 0.2em;
+  cursor: pointer;
+  border-radius: 2em;
+  font-weight: bold;
+  font-size: 14px;
+  /* El tamaño está fijo en 14 porque el botón de twitter está hecho a medida de píxeles*/
+}
+
+.boton.cta{
+  padding: 0.5em 1em;
+  color: var(--color-contraste);
+  background-color: var(--color-enfasis);
+  transition-duration: 0.2s;
+  transition-property: box-shadow;
+}
+.boton.cta:hover{
+  box-shadow: 0 0 5em rgba(0, 0, 0,0.15) inset;
+}
+.boton.cta:active{
+  box-shadow: 0 0 5em rgba(0, 0, 0,0.3) inset;
+}
+
+.boton.cta.seguir{
+  color: var(--color-enfasis);
+  background: none;
+  border: 1px solid var(--color-enfasis);
+}
+.boton.cta.seguir:hover{
+  box-shadow: 0 0 5em var(--color-enfasis-transparente) inset;
+}

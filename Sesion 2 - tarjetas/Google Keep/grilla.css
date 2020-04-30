@@ -1,0 +1,14 @@
+body{
+  display: flex;
+  flex-flow: row wrap;
+  background-color: rgb(32, 33, 36);
+  color: rgb(255, 255, 255);
+}
+h1{
+  width: 100%;
+}
+body .nota{
+  margin: 0.5em;
+  max-width: 240px;
+  height: min-content;
+}
