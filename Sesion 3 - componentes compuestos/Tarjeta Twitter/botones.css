@@ -1,0 +1,39 @@
+.boton{
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0);
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 999px;
+  margin: 0.2em;
+  text-align: left;
+}
+
+.boton.cta{
+  padding: 0.5em 1em;
+  color: var(--color-contraste);
+  background-color: var(--color-enfasis);
+  transition-duration: 0.2s;
+  transition-property: background-color;
+}
+.boton.cta:hover{
+  background-color: var(--color-enfasis-oscuro);
+}
+
+.boton.cta.seguir{
+  color: var(--color-enfasis);
+  background-color: transparent;
+  border-color: var(--color-enfasis);
+}
+.boton.cta.seguir:hover{
+  background-color: var(--color-enfasis-transparente);
+}
+
+.boton.mas{
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  font-size: 0.8em;
+  color: var(--color-enfasis);
+  transition-duration: 0.2s;
+  transition-property: box-shadow;
+}

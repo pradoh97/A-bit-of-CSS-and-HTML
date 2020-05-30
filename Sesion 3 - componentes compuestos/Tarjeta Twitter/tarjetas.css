@@ -1,0 +1,45 @@
+.tarjeta > *{
+  padding: 0.5em 0.8em;
+  border-bottom: 1px solid var(--color-normal-claro);
+}
+.tarjeta{
+  display: flex;
+  flex-flow: column;
+  max-width: 350px;
+  background-color: var(--color-normal);
+  border-radius: 20px;
+}
+
+.recomendacion{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  transition-duration: 0.2s;
+  transition-property: box-shadow;
+  cursor: pointer;
+  max-height: 45px;
+}
+.recomendacion:hover, .tarjeta > button:hover{
+  box-shadow: 0 0 50em rgba(255, 255, 255, 0.05) inset;
+}
+.recomendacion.seguir img{
+  border-radius: 50%;
+  height: 100%;
+}
+.recomendacion.seguir .perfil{
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+  padding: 0 1em;
+  font-size: 0.9em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.recomendacion.seguir .perfil > span:first-child, .tarjeta .titulo{
+  font-weight: 700;
+}
+.recomendacion.seguir .perfil > span:last-child{
+  font-size: 0.9em;
+  filter: brightness(50%);
+}
