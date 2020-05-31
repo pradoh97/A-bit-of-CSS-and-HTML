@@ -17,7 +17,8 @@
   transition-duration: 0.2s;
   transition-property: box-shadow;
   cursor: pointer;
-  max-height: 45px;
+  /* Se cambió el height por max-height por incompatibilidades entre navegadores. Muchas gracias a Angel por indicarme el error :) */
+  max-height: inherit;
 }
 .recomendacion:hover, .tarjeta > button:hover{
   box-shadow: 0 0 50em rgba(255, 255, 255, 0.05) inset;
