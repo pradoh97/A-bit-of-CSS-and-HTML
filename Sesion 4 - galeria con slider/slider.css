@@ -1,0 +1,82 @@
+body{
+  margin: 0;
+  background-color: rgb(255, 255, 255);
+}
+.gallery{
+  margin: 0 1em;
+  position: relative;
+}
+.slider{
+  display: grid;
+  grid-auto-columns: 45vh;
+  grid-template-rows: 90vh;
+  grid-auto-flow: column;
+  overflow-x: auto;
+  overflow-y: hidden;
+  grid-gap: 0 1em;
+  padding: 1em 0;
+  scrollbar-color: rgb(0, 0, 0) rgb(230, 230, 230);
+}
+
+.slider img{
+  position: relative;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: 0.2s transform;
+  box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.3);
+}
+
+.gallery .controls .control{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10% 2em;
+  color: rgb(255, 255, 255);
+  border: none;
+  box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: 0.2s box-shadow, 0.2s background-color;
+}
+.gallery .controls .control:hover{
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.gallery .controls .control:focus{
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  outline: 1px solid rgb(255, 255, 255);
+}
+.gallery .controls .control:active{
+  box-shadow: none;
+  outline: 1px solid rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.gallery .controls .control.right{
+  right: 0;
+}
+
+@media (min-width: 35em){
+  body{
+    background-color: rgb(0, 0, 0);
+  }
+  .slider{
+    scrollbar-color: rgb(230, 230, 230) rgb(50, 50, 50);
+  }
+  .slider img{
+    box-shadow: none;
+  }
+  .slider img:hover{
+    transform: scale(1.2);
+    z-index: 1;
+  }
+  .gallery .controls .control{
+    opacity: 0;
+    transition: 0.2s opacity;
+  }
+  .gallery:hover .controls .control{
+    opacity: 1;
+  }
+}
